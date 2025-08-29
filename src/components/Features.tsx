@@ -1,29 +1,27 @@
-type Feature = { title: string; desc: string };
-const features: Feature[] = [
-  { title: "Find & vet creators", desc: "Search by niche, city, engagement rate." },
-  { title: "Automate outreach", desc: "Personalized DMs/email tracking & costs." },
+type Service = { title: string; desc: string };
+const services: Service[] = [
+  { title: "Research & Campaign Planning", desc: "Insight-driven concepts and precise execution timelines." },
+  { title: "Social Media Posts", desc: "High-volume UGC for reels, shorts, and posts across channels." },
   { title: "Manage campaigns", desc: "Briefs, deliverables, approvals, links." },
-  { title: "Measure ROI", desc: "Views, CTR, CPV—scale what works." },
+  { title: "Blog & Articles", desc: "SEO-friendly, brand-aligned articles and write-ups." },
 ];
 
-export default function Features() {
+export default function Services() {
   return (
-    <section id="features" className="container-max py-16 sm:py-24">
+    <section id="services" className="container-max py-16 sm:py-24">
       <div className="text-center">
-        <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-          Everything you need to run creator campaigns
-        </h2>
+        <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Our Services</h2>
         <p className="mt-3 text-slate-600">
-          Stop juggling sheets and DMs. Run your workflow end-to-end.
+          UGC strategy and production at scale—built around your outcomes.
         </p>
       </div>
 
-      <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-        {features.map((f) => (
-          <div key={f.title} className="rounded-2xl border border-slate-200 p-6">
+      <div className="mt-10 grid gap-6 md:grid-cols-3">
+        {services.map((s) => (
+          <div key={s.title} className="rounded-2xl border border-slate-200 p-6">
             <div className="h-8 w-8 rounded-md bg-brand-100 border border-brand-200 mb-4" />
-            <h3 className="font-semibold">{f.title}</h3>
-            <p className="mt-2 text-sm text-slate-600">{f.desc}</p>
+            <h3 className="font-semibold">{s.title}</h3>
+            <p className="mt-2 text-sm text-slate-600">{s.desc}</p>
           </div>
         ))}
       </div>
