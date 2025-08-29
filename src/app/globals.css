@@ -1,17 +1,32 @@
 @import "tailwindcss";
 
+/* Light defaults */
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
 
+/* ✅ TOKENS ONLY (Tailwind v4 reads these as utilities) */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* Brand palette -> gives you bg-brand-600, text-brand-600, etc. */
+  --color-brand-50:  #eff6ff;
+  --color-brand-100: #dbeafe;
+  --color-brand-200: #bfdbfe;
+  --color-brand-300: #93c5fd;
+  --color-brand-400: #60a5fa;
+  --color-brand-500: #3b82f6;
+  --color-brand-600: #2563eb;
+  --color-brand-700: #1d4ed8;
+  --color-brand-800: #1e40af;
+  --color-brand-900: #1e3a8a;
 }
 
+/* Dark-mode tokens */
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -19,8 +34,22 @@
   }
 }
 
+/* Regular CSS (NOT inside @theme) */
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif; /* falls back if Geist isn’t set */
+}
+
+/* Comfy container helper for page width + padding */
+.container-max {
+  max-width: 72rem;           /* ~1152px */
+  margin-inline: auto;
+  padding-inline: 1rem;       /* 16px */
+}
+@media (min-width: 640px) {   /* sm */
+  .container-max { padding-inline: 1.5rem; }
+}
+@media (min-width: 1024px) {  /* lg */
+  .container-max { padding-inline: 2rem; }
 }
