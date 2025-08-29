@@ -1,6 +1,6 @@
 const tiers = [
-  { name: "Starter", price: "Free", features: ["20 creators", "Basic outreach", "Email support"], cta: "Get started" },
-  { name: "Growth", price: "$49/mo", features: ["200 creators", "Automations", "Priority support"], cta: "Start trial", highlighted: true },
+  { name: "Starter", price: "$29/mo", features: ["20 creators", "Basic outreach", "Email support"], cta: "Get started" },
+  { name: "Growth", price: "$99/mo", features: ["200 creators", "Automations", "Priority support"], cta: "Start trial", highlighted: true },
   { name: "Scale", price: "Custom", features: ["Unlimited creators", "SLA + onboarding", "Dedicated CSM"], cta: "Contact sales" },
 ];
 
